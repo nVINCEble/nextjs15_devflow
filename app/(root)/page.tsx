@@ -1,13 +1,8 @@
-import { auth } from "@/auth";
 import QuestionCard from "@/components/cards/QuestionCard";
 import HomeFilter from "@/components/filters/HomeFilter";
 import LocalSearch from "@/components/search/LocalSearch";
 import { Button } from "@/components/ui/button";
 import ROUTES from "@/constants/routes";
-import { api } from "@/lib/api";
-import handleError from "@/lib/handlers/error";
-import { NotFoundError, ValidationError } from "@/lib/http-errors";
-import dbConnect from "@/lib/mongoose";
 import Link from "next/link";
 
 const questions = [
@@ -55,10 +50,6 @@ interface SearchParams {
 }
 
 const Home = async ({ searchParams }: SearchParams) => {
-  const session = await auth();
-
-  console.log("Session: ", session);
-
   const { query = "", filter = "" } = await searchParams;
   const filteredQuestions = questions.filter((question) => {
     const matchesQuery = question.title.toLowerCase().includes(query.toLowerCase());
