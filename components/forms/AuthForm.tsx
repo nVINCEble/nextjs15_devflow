@@ -16,7 +16,6 @@ import {
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import ROUTES from "@/constants/routes";
-import { ActionResponse } from "@/types/global";
 import { toast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 

@@ -1,7 +1,6 @@
-import { RouterParams } from "@/types/global";
 import React from "react";
 
-const QuestionDetails = async ({ params }: RouterParams) => {
+const QuestionDetails = async ({ params }: RouteParams) => {
   const { id } = await params;
   return <div>Question Page: {id}</div>;
 };

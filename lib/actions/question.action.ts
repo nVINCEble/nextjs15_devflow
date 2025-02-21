@@ -9,7 +9,6 @@ import Tag, { ITagDoc } from "@/database/tag.model";
 import action from "../handlers/action";
 import handleError from "../handlers/error";
 import { AskQuestionSchema, EditQuestionSchema, GetQuestionSchema } from "../validations";
-import { ActionResponse, ErrorResponse } from "@/types/global";
 
 export async function createQuestion(
   params: CreateQuestionParams

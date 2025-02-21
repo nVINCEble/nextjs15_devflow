@@ -1,6 +1,3 @@
-import { NextResponse } from "next/server";
-import { TlsOptions } from "tls";
-
 interface Tag {
   _id: string;
   name: string;
